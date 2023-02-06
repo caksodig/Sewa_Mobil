@@ -42,6 +42,7 @@ const db = mysql.createConnection({
 app.post("/mobil", upload.single("image"), (req, res) => {
     // prepare data
     let data = {
+        id_mobil: req.body.id_mobil,
         nomor_mobil: req.body.nomor_mobil,
         merk: req.body.merk,
         jenis: req.body.jenis,
@@ -185,6 +186,7 @@ app.post("/pelanggan", (req, res) => {
 
     // prepare data
     let data = {
+        id_pelanggan: req.body.id_pelanggan,
         nama_pelanggan: req.body.nama_pelanggan,
         alamat_pelanggan: req.body.alamat_pelanggan,
         kontak: req.body.kontak
@@ -300,6 +302,7 @@ app.post("/karyawan", (req, res) => {
 
     // prepare data
     let data = {
+        id_karyawan: req.body.id_karyawan,
         nama_karyawan: req.body.nama_karyawan,
         alamat_karyawan: req.body.alamat_karyawan,
         kontak: req.body.kontak,
